@@ -1,0 +1,45 @@
+{
+  "id": "d7001906-8352-43ab-ac1c-26076441ba71",
+  "name": "AL Test Runner",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+        "id":  "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+        "name":  "Library Assert",
+        "publisher":  "Microsoft",
+        "version":  "19.0.0.0"
+    },
+    {
+        "id":  "5d86850b-0d76-4eca-bd7b-951ad998e997",
+        "name":  "Tests-TestLibraries",
+        "publisher":  "Microsoft",
+        "version":  "19.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "26.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "15.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

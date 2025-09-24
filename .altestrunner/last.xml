@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<assemblies>
+  <assembly name="50102 DateFunctionTests" test-framework="PS Test Runner" run-date="2025-09-24" run-time="18:29:46" total="1" passed="1" failed="0" skipped="0" time="0.01">
+    <collection name="DateFunctionTests" total="1" passed="1" failed="0" skipped="0" time="0.01" Skipped="0">
+      <test name="DateFunctionTests:DMY2Date_InvalidDate_RaisesError" method="DMY2Date_InvalidDate_RaisesError" time="0.01" result="Pass" />
+    </collection>
+  </assembly>
+</assemblies>
