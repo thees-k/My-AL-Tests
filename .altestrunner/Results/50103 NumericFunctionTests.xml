@@ -1,21 +1,10 @@
 <assembly name="50103 NumericFunctionTests" test-framework="PS Test Runner" run-date="2025-09-25" run-time="10:51:18" total="6" passed="5" failed="1" skipped="0" time="0.685">
   <collection name="NumericFunctionTests" total="6" passed="5" failed="1" skipped="0" time="0.685" Skipped="0">
-    <test name="NumericFunctionTests:Round_DefaultAndDirection" method="Round_DefaultAndDirection" time="0.027" result="Fail">
-      <failure>
-        <message>Assert.AreEqual failed. Expected:&lt;2&gt; (Integer). Actual:&lt;1.5&gt; (Decimal). Round(1.5) should produce 2..</message>
-        <stack-trace>Assert(CodeUnit 130000).AreEqual line 3 - Tests-TestLibraries by Microsoft version 26.5.38752.39605
-NumericFunctionTests(CodeUnit 50103).Round_DefaultAndDirection line 9 - AL Test Runner by Default Publisher version 1.0.0.0
-"Test Runner - Mgt"(CodeUnit 130454).RunTests line 26 - Test Runner by Microsoft version 26.5.38752.39605
-"Test Runner - Isol. Codeunit"(CodeUnit 130450).OnRun(Trigger) line 4 - Test Runner by Microsoft version 26.5.38752.39605
-"Test Suite Mgt."(CodeUnit 130456).RunTests line 2 - Test Runner by Microsoft version 26.5.38752.39605
-"Test Suite Mgt."(CodeUnit 130456).RunSelectedTests line 35 - Test Runner by Microsoft version 26.5.38752.39605
-"Command Line Test Tool"(Page 130455)."RunSelectedTests - OnAction"(Trigger) line 7 - Test Runner by Microsoft version 26.5.38752.39605</stack-trace>
-      </failure>
-    </test>
+    <test name="NumericFunctionTests:Round_DefaultAndDirection" method="Round_DefaultAndDirection" time="0.014" result="Pass" />
     <test name="NumericFunctionTests:Abs_Basic" method="Abs_Basic" time="0.003" result="Pass" />
-    <test name="NumericFunctionTests:Power_SquareRoot_And_ZeroPowZero" method="Power_SquareRoot_And_ZeroPowZero" time="0" result="Pass" />
+    <test name="NumericFunctionTests:Power_SquareRoot_And_ZeroPowZero" method="Power_SquareRoot_And_ZeroPowZero" time="0.004" result="Pass" />
     <test name="NumericFunctionTests:Power_NegativeBaseFractional_Throws" method="Power_NegativeBaseFractional_Throws" time="0.003" result="Pass" />
-    <test name="NumericFunctionTests:Randomize_Deterministic_WithSeed" method="Randomize_Deterministic_WithSeed" time="0.003" result="Pass" />
+    <test name="NumericFunctionTests:Randomize_Deterministic_WithSeed" method="Randomize_Deterministic_WithSeed" time="0" result="Pass" />
     <test name="NumericFunctionTests:Random_EdgeCases_ZeroAndNegative" method="Random_EdgeCases_ZeroAndNegative" time="0.003" result="Pass" />
   </collection>
 </assembly>

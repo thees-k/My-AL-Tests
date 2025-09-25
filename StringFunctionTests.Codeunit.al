@@ -6,9 +6,9 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure StrPos_FindSubstring()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text;
         Position: Integer;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'Hello world';
         Position := StrPos(InputText, 'world'); // 1-based -> should return 7
@@ -18,9 +18,9 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure StrPos_NotFound_ReturnsZero()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text;
         Position: Integer;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'abc';
         Position := StrPos(InputText, 'z');
@@ -30,10 +30,10 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure IndexOf_WorksLikeStrPos()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text;
         FirstPos: Integer;
         SecondPos: Integer;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'HelloWorldOfMany';
         FirstPos := StrPos(InputText, 'l');       // expecting 3
@@ -44,10 +44,10 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure CopyStr_And_Substring_Basic()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text[50];
         Cut1: Text;
         Cut2: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'HelloWorldOfManyManyCharacters';
         Cut1 := CopyStr(InputText, 5, 10);           // 'oWorldOfMa'
@@ -58,9 +58,9 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure CopyStr_WithoutLength_ReturnsToEnd()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text[10];
         ResultText: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'abcdef';
         ResultText := CopyStr(InputText, 3); // should return 'cdef'
@@ -70,10 +70,10 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure SelectStr_And_Split_Equivalence()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text[80];
         SelectedPart: Text;
         SplitValue: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'This,is a comma,separated,string';
         SelectedPart := SelectStr(2, InputText);                  // 'is a comma'
@@ -84,9 +84,9 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure InsStr_InsertsCorrectly()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text[80];
         ResultText: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'Press ENTER to continue.';
         ResultText := InsStr(InputText, 'or ESC ', 13);
@@ -96,10 +96,10 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure StrLen_And_MaxStrLen()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text[50];
         LenActual: Integer;
         LenMax: Integer;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := '12345';
         LenActual := StrLen(InputText);      // 5
@@ -111,12 +111,12 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure CaseConversion_ToUpper_ToLower()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text;
         Upper1: Text;
         Upper2: Text;
         Lower1: Text;
         Lower2: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'HelloWorld';
         Upper1 := UpperCase(InputText);
@@ -133,9 +133,9 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure IncStr_IncrementsNumberInString()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text;
         ResultText: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'Account no. 99 does not balance.';
         ResultText := IncStr(InputText);
@@ -145,8 +145,8 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure Contains_StartsWith_EndsWith()
     var
-        InputText: Text;
         AssertInstance: Codeunit Assert;
+        InputText: Text;
     begin
         InputText := 'Hello world';
         AssertInstance.IsTrue(InputText.Contains('world'), 'Contains failed to detect substring.');
@@ -158,11 +158,11 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure Replace_Remove_Trim()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text[80];
         ReplacedText: Text;
         RemovedText: Text;
         TrimmedText: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := '  Hello world  ';
         ReplacedText := InputText.Replace('world', 'planet');    // '  Hello planet  '
@@ -177,10 +177,10 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure PadLeft_PadRight_Lengths()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text;
         LeftPaddedText: Text;
         RightPaddedText: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := '12';
         LeftPaddedText := InputText.PadLeft(5, '0');   // expected length 5, '00012'
@@ -195,9 +195,9 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure LastIndexOf_FindsLastOccurrence()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text;
         IndexOfLast: Integer;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := 'banana';
         IndexOfLast := InputText.LastIndexOf('a'); // expecting 6 (1-based)
@@ -207,10 +207,10 @@ codeunit 50101 "StringFunctionTests"
     [Test]
     procedure TrimStart_TrimEnd()
     var
+        AssertInstance: Codeunit Assert;
         InputText: Text;
         TrimmedStart: Text;
         TrimmedEnd: Text;
-        AssertInstance: Codeunit Assert;
     begin
         InputText := '  abc  ';
         TrimmedStart := InputText.TrimStart();

@@ -5,10 +5,10 @@ codeunit 50100 "Tryout"
     [Test]
     procedure TryoutSomething()
     var
+        AssertInstance: Codeunit Assert;
         s: Text;
-        Assert: Codeunit Assert;
     begin
         s := 'Hello world';
-        Assert.AreEqual('', UpperCase(s), '<<<<<<<<<<<<<<<<<<<<<<<<');
+        AssertInstance.AreEqual('', UpperCase(s), '<<<<<<<<<<<<<<<<<<<<<<<<');
     end;
 }

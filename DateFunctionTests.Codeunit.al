@@ -6,11 +6,11 @@ codeunit 50102 "DateFunctionTests"
     [Test]
     procedure Date2DMY_BasicParts()
     var
+        AssertInstance: Codeunit Assert;
         DateValue: Date;
         DayPart: Integer;
         MonthPart: Integer;
         YearPart: Integer;
-        AssertInstance: Codeunit Assert;
     begin
         // Use a deterministic date (17-Apr-2020 used on MS docs)
         DateValue := DMY2Date(17, 4, 2020);
@@ -26,10 +26,10 @@ codeunit 50102 "DateFunctionTests"
     [Test]
     procedure Date2DWY_WeekSpanningYear_YearDecision()
     var
+        AssertInstance: Codeunit Assert;
         DateValue: Date;
         DayOfWeek: Integer;
         WeekYear: Integer;
-        AssertInstance: Codeunit Assert;
     begin
         // Date2DWY has special behavior when a week spans two years:
         // it returns the year that contains the most days of that week.
@@ -45,9 +45,9 @@ codeunit 50102 "DateFunctionTests"
     [Test]
     procedure CalcDate_SimpleAdditions()
     var
+        AssertInstance: Codeunit Assert;
         BaseDate: Date;
         ResultDate: Date;
-        AssertInstance: Codeunit Assert;
     begin
         BaseDate := DMY2Date(17, 4, 2020); // example from docs
         // 1 week after 2020-04-17 is 2020-04-24
@@ -62,10 +62,10 @@ codeunit 50102 "DateFunctionTests"
     [Test]
     procedure CalcDate_EndOfMonth_And_FirstDay()
     var
+        AssertInstance: Codeunit Assert;
         BaseDate: Date;
         EndOfMonthDate: Date;
         FirstOfMonthDate: Date;
-        AssertInstance: Codeunit Assert;
     begin
         BaseDate := DMY2Date(17, 4, 2020);
         // Angle-bracket notation <CM> / <-CM> is commonly used to get last/first of the month
@@ -79,9 +79,9 @@ codeunit 50102 "DateFunctionTests"
     [Test]
     procedure CalcDate_AddMonth_DayOverflowAdjustsToLastValidDay()
     var
+        AssertInstance: Codeunit Assert;
         BaseDate: Date;
         ResultDate: Date;
-        AssertInstance: Codeunit Assert;
     begin
         // Add one month to 31-Jan-2021 (non-leap year) -> expect 28-Feb-2021
         BaseDate := DMY2Date(31, 1, 2021);
@@ -101,17 +101,17 @@ codeunit 50102 "DateFunctionTests"
     begin
         // DMY2Date(29, 2, 2019) is invalid (2019 not a leap year) -> should raise a runtime error.
         // Use ASSERTERROR to declare that an error is expected.
-        ASSERTERROR DummyDate := DMY2Date(29, 2, 2019);
+        asserterror DummyDate := DMY2Date(29, 2, 2019);
         // If the call above does not raise, the test framework will fail this test.
     end;
 
     [Test]
     procedure WorkDate_SetAndRestore()
     var
+        AssertInstance: Codeunit Assert;
         PrevWorkDate: Date;
         NewWorkDate: Date;
         ReturnedWorkDate: Date;
-        AssertInstance: Codeunit Assert;
     begin
         // Save current work date and restore at the end of the test to keep tests isolated.
         PrevWorkDate := WorkDate(); // get current work date
@@ -128,9 +128,9 @@ codeunit 50102 "DateFunctionTests"
     [Test]
     procedure Today_And_Time_Availability()
     var
+        AssertInstance: Codeunit Assert;
         TodayDate: Date;
         CurrentTime: Time;
-        AssertInstance: Codeunit Assert;
     begin
         // Basic smoke tests: Today() and Time() must return a value (non-zero for date)
         TodayDate := Today();

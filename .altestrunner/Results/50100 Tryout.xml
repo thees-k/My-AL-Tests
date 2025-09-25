@@ -1,7 +1,16 @@
-<assembly name="50100 Tryout" test-framework="PS Test Runner" run-date="2025-09-24" run-time="17:46:01" total="1" passed="0" failed="1" skipped="0" time="0.01"><collection name="Tryout" total="1" passed="0" failed="1" skipped="0" time="0.01" Skipped="0"><test name="Tryout:TryoutSomething" method="TryoutSomething" time="0.01" result="Fail"><failure><message>Assert.AreEqual failed. Expected:&lt;&gt; (Text). Actual:&lt;HELLO WORLD&gt; (Text). &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; see Actual.</message><stack-trace>Assert(CodeUnit 130000).AreEqual line 3 - Tests-TestLibraries by Microsoft version 26.5.38752.39605
+<assembly name="50100 Tryout" test-framework="PS Test Runner" run-date="2025-09-24" run-time="17:46:01" total="1" passed="0" failed="1" skipped="0" time="0.01">
+  <collection name="Tryout" total="1" passed="0" failed="1" skipped="0" time="0.01" Skipped="0">
+    <test name="Tryout:TryoutSomething" method="TryoutSomething" time="0.01" result="Fail">
+      <failure>
+        <message>Assert.AreEqual failed. Expected:&lt;&gt; (Text). Actual:&lt;HELLO WORLD&gt; (Text). &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;.</message>
+        <stack-trace>Assert(CodeUnit 130000).AreEqual line 3 - Tests-TestLibraries by Microsoft version 26.5.38752.39605
 Tryout(CodeUnit 50100).TryoutSomething line 6 - AL Test Runner by Default Publisher version 1.0.0.0
 "Test Runner - Mgt"(CodeUnit 130454).RunTests line 26 - Test Runner by Microsoft version 26.5.38752.39605
 "Test Runner - Isol. Codeunit"(CodeUnit 130450).OnRun(Trigger) line 4 - Test Runner by Microsoft version 26.5.38752.39605
 "Test Suite Mgt."(CodeUnit 130456).RunTests line 2 - Test Runner by Microsoft version 26.5.38752.39605
 "Test Suite Mgt."(CodeUnit 130456).RunSelectedTests line 35 - Test Runner by Microsoft version 26.5.38752.39605
-"Command Line Test Tool"(Page 130455)."RunSelectedTests - OnAction"(Trigger) line 7 - Test Runner by Microsoft version 26.5.38752.39605</stack-trace></failure></test></collection></assembly>
+"Command Line Test Tool"(Page 130455)."RunSelectedTests - OnAction"(Trigger) line 7 - Test Runner by Microsoft version 26.5.38752.39605</stack-trace>
+      </failure>
+    </test>
+  </collection>
+</assembly>

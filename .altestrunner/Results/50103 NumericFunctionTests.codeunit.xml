@@ -1,0 +1,16 @@
+<assembly name="50103 NumericFunctionTests.codeunit" test-framework="PS Test Runner" run-date="2025-09-25" run-time="14:03:09" total="6" passed="6" failed="0" skipped="0" time="0.033">
+  <collection name="NumericFunctionTests.codeunit" total="6" passed="6" failed="0" skipped="0" time="0.033" Skipped="0">
+    <test name="NumericFunctionTests.codeunit:Round_DefaultAndDirection" method="Round_DefaultAndDirection" time="0.02" result="Pass" />
+    <test name="NumericFunctionTests.codeunit:Abs_Basic" method="Abs_Basic" time="0.004" result="Pass" />
+    <test name="NumericFunctionTests.codeunit:Power_SquareRoot_And_ZeroPowZero" method="Power_SquareRoot_And_ZeroPowZero" time="0.003" result="Pass" />
+    <test name="NumericFunctionTests.codeunit:Power_NegativeBaseFractional_Throws" method="Power_NegativeBaseFractional_Throws" time="0.003" result="Pass" />
+    <test name="NumericFunctionTests.codeunit:Randomize_Deterministic_WithSeed" method="Randomize_Deterministic_WithSeed" time="0" result="Pass" />
+    <test name="NumericFunctionTests.codeunit:Random_EdgeCases_ZeroAndNegative" method="Random_EdgeCases_ZeroAndNegative" time="0.003" result="Pass" />
+    <test name="NumericFunctionTests.Codeunit:Round_DefaultAndDirection" method="Round_DefaultAndDirection" time="0.013" result="Pass" />
+    <test name="NumericFunctionTests.Codeunit:Abs_Basic" method="Abs_Basic" time="0" result="Pass" />
+    <test name="NumericFunctionTests.Codeunit:Power_SquareRoot_And_ZeroPowZero" method="Power_SquareRoot_And_ZeroPowZero" time="0" result="Pass" />
+    <test name="NumericFunctionTests.Codeunit:Power_NegativeBaseFractional_Throws" method="Power_NegativeBaseFractional_Throws" time="0.003" result="Pass" />
+    <test name="NumericFunctionTests.Codeunit:Randomize_Deterministic_WithSeed" method="Randomize_Deterministic_WithSeed" time="0" result="Pass" />
+    <test name="NumericFunctionTests.Codeunit:Random_EdgeCases_ZeroAndNegative" method="Random_EdgeCases_ZeroAndNegative" time="0" result="Pass" />
+  </collection>
+</assembly>
