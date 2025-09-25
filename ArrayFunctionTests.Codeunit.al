@@ -1,3 +1,4 @@
+// https://learn.microsoft.com/en-us/training/modules/al-built-in-functions/6-array-functions
 codeunit 50104 ArrayFunctionTests
 {
     SubType = Test;
