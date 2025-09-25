@@ -1,6 +1,6 @@
 <assembly name="50104 ArrayFunctionTests" test-framework="PS Test Runner" run-date="2025-09-25" run-time="14:45:17" total="3" passed="0" failed="3" skipped="0" time="0.022">
   <collection name="ArrayFunctionTests" total="3" passed="0" failed="3" skipped="0" time="0.022" Skipped="0">
-    <test name="ArrayFunctionTests:ArrayLen_BasicAndDimensions" method="ArrayLen_BasicAndDimensions" time="0.007" result="Pass" />
+    <test name="ArrayFunctionTests:ArrayLen_BasicAndDimensions" method="ArrayLen_BasicAndDimensions" time="0.103" result="Pass" />
     <test name="ArrayFunctionTests:CompressArray_StringsAndCode_And_Blanks" method="CompressArray_StringsAndCode_And_Blanks" time="0.004" result="Pass" />
     <test name="ArrayFunctionTests:CopyArray_Basic_CopyPositionOnly_And_Errors" method="CopyArray_Basic_CopyPositionOnly_And_Errors" time="0.004" result="Pass" />
   </collection>

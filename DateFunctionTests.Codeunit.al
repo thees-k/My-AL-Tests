@@ -1,5 +1,5 @@
 // https://learn.microsoft.com/en-us/training/modules/al-built-in-functions/4-date-functions
-codeunit 50102 "DateFunctionTests"
+codeunit 50103 "DateFunctionTests"
 {
     SubType = Test;
 

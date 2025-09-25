@@ -1,5 +1,5 @@
 // https://learn.microsoft.com/en-us/training/modules/al-built-in-functions/5-numeric-functions
-codeunit 50103 "NumericFunctionTests"
+codeunit 50102 "NumericFunctionTests"
 {
     SubType = Test;
 

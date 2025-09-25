@@ -1,0 +1,10 @@
+<assembly name="50106 ListFunctionTests" test-framework="PS Test Runner" run-date="2025-09-25" run-time="20:11:09" total="6" passed="5" failed="1" skipped="0" time="0.029">
+  <collection name="ListFunctionTests" total="6" passed="5" failed="1" skipped="0" time="0.029" Skipped="0">
+    <test name="ListFunctionTests:Add_Contains_Count_Get_Set" method="Add_Contains_Count_Get_Set" time="0.007" result="Pass" />
+    <test name="ListFunctionTests:Insert_ShiftsElements_And_EdgeCases" method="Insert_ShiftsElements_And_EdgeCases" time="0.004" result="Pass" />
+    <test name="ListFunctionTests:Remove_RemoveAt_RemoveRange_Behaviour" method="Remove_RemoveAt_RemoveRange_Behaviour" time="0.007" result="Pass" />
+    <test name="ListFunctionTests:AddRange_GetRange_And_GetRange_Overload" method="AddRange_GetRange_And_GetRange_Overload" time="0.006" result="Pass" />
+    <test name="ListFunctionTests:EdgeCases_InsertAndRemoveRange_Boundaries" method="EdgeCases_InsertAndRemoveRange_Boundaries" time="0.003" result="Pass" />
+    <test name="ListFunctionTests:IndexOf_LastIndexOf_Reverse_EdgeCases" method="IndexOf_LastIndexOf_Reverse_EdgeCases" time="0.004" result="Pass" />
+  </collection>
+</assembly>
