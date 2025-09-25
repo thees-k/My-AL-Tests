@@ -1,12 +1,12 @@
 <assembly name="50102 DateFunctionTests" test-framework="PS Test Runner" run-date="2025-09-24" run-time="18:07:11" total="7" passed="7" failed="0" skipped="0" time="0.031">
   <collection name="DateFunctionTests" total="7" passed="7" failed="0" skipped="0" time="0.031" Skipped="0">
     <test name="DateFunctionTests:Date2DMY_BasicParts" method="Date2DMY_BasicParts" time="0.003" result="Pass" />
-    <test name="DateFunctionTests:Date2DWY_WeekSpanningYear_YearDecision" method="Date2DWY_WeekSpanningYear_YearDecision" time="0.007" result="Pass" />
+    <test name="DateFunctionTests:Date2DWY_WeekSpanningYear_YearDecision" method="Date2DWY_WeekSpanningYear_YearDecision" time="0" result="Pass" />
     <test name="DateFunctionTests:CalcDate_SimpleAdditions" method="CalcDate_SimpleAdditions" time="0.007" result="Pass" />
     <test name="DateFunctionTests:CalcDate_EndOfMonth_And_FirstDay" method="CalcDate_EndOfMonth_And_FirstDay" time="0.003" result="Pass" />
     <test name="DateFunctionTests:CalcDate_AddMonth_DayOverflowAdjustsToLastValidDay" method="CalcDate_AddMonth_DayOverflowAdjustsToLastValidDay" time="0.004" result="Pass" />
-    <test name="DateFunctionTests:WorkDate_SetAndRestore" method="WorkDate_SetAndRestore" time="0.003" result="Pass" />
+    <test name="DateFunctionTests:WorkDate_SetAndRestore" method="WorkDate_SetAndRestore" time="0.004" result="Pass" />
     <test name="DateFunctionTests:Today_And_Time_Availability" method="Today_And_Time_Availability" time="0.004" result="Pass" />
-    <test name="DateFunctionTests:DMY2Date_InvalidDate_RaisesError" method="DMY2Date_InvalidDate_RaisesError" time="0.01" result="Pass" />
+    <test name="DateFunctionTests:DMY2Date_InvalidDate_RaisesError" method="DMY2Date_InvalidDate_RaisesError" time="0.006" result="Pass" />
   </collection>
 </assembly>
