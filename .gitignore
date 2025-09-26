@@ -16,3 +16,7 @@
 *.app.al.publish.zip
 bin/
 obj/
+
+# AL Test Runner folder with performance profiling files and test result files
+.altestrunner/
+
