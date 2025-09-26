@@ -51,11 +51,11 @@ codeunit 50103 "DateFunctionTests"
     begin
         BaseDate := DMY2Date(17, 4, 2020); // example from docs
         // 1 week after 2020-04-17 is 2020-04-24
-        ResultDate := CalcDate('1W', BaseDate);
+        ResultDate := CalcDate('<1W>', BaseDate);
         AssertInstance.AreEqual(DMY2Date(24, 4, 2020), ResultDate, 'CalcDate("1W") did not return expected date.');
 
         // 30 days after BaseDate
-        ResultDate := CalcDate('30D', BaseDate);
+        ResultDate := CalcDate('<30D>', BaseDate);
         AssertInstance.AreEqual(DMY2Date(17, 5, 2020), ResultDate, 'CalcDate("30D") did not return expected date.');
     end;
 
@@ -85,12 +85,12 @@ codeunit 50103 "DateFunctionTests"
     begin
         // Add one month to 31-Jan-2021 (non-leap year) -> expect 28-Feb-2021
         BaseDate := DMY2Date(31, 1, 2021);
-        ResultDate := CalcDate('1M', BaseDate);
+        ResultDate := CalcDate('<1M>', BaseDate);
         AssertInstance.AreEqual(DMY2Date(28, 2, 2021), ResultDate, 'CalcDate("1M") did not handle day overflow correctly (expected last valid day of next month).');
 
         // Another check: adding 1M to 31-Mar-2021 -> 30-Apr-2021
         BaseDate := DMY2Date(31, 3, 2021);
-        ResultDate := CalcDate('1M', BaseDate);
+        ResultDate := CalcDate('<1M>', BaseDate);
         AssertInstance.AreEqual(DMY2Date(30, 4, 2021), ResultDate, 'CalcDate("1M") did not adjust March 31 correctly when adding one month.');
     end;
 
@@ -101,7 +101,9 @@ codeunit 50103 "DateFunctionTests"
     begin
         // DMY2Date(29, 2, 2019) is invalid (2019 not a leap year) -> should raise a runtime error.
         // Use ASSERTERROR to declare that an error is expected.
+#pragma warning disable AA0206
         asserterror DummyDate := DMY2Date(29, 2, 2019);
+#pragma warning restore AA0206
         // If the call above does not raise, the test framework will fail this test.
     end;
 

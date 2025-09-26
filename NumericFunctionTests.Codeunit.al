@@ -48,7 +48,6 @@ codeunit 50102 "NumericFunctionTests"
         // Negative precisions (like -1) aren't allowed
         // Expect a runtime error
         asserterror ResultValue := Round(15, -1);
-        // If the call above does not raise, the test framework will fail this test.
     end;
 
     [Test]
@@ -87,8 +86,9 @@ codeunit 50102 "NumericFunctionTests"
     begin
         // Typical edge-case: negative base with fractional exponent is not a real decimal.
         // Expect a runtime error
+#pragma warning disable AA0206
         asserterror DummyResult := Power(-1, 0.5);
-        // If the call above does not raise, the test framework will fail this test.
+#pragma warning restore AA0206
     end;
 
     [Test]
