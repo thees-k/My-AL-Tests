@@ -1,3 +1,4 @@
+// https://learn.microsoft.com/en-us/training/modules/al-built-in-functions/8-system-functions
 codeunit 50107 SystemFunctionTests
 {
     Subtype = Test;
