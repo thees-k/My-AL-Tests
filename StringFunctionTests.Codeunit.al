@@ -143,6 +143,20 @@ codeunit 50101 "StringFunctionTests"
     end;
 
     [Test]
+    procedure IncStr_SeveralNumbersInString()
+    var
+        AssertInstance: Codeunit Assert;
+        InputText: Text;
+        ResultText: Text;
+    begin
+        InputText := 'Account no. 2342 shows a total of -452$: -440';
+        ResultText := IncStr(InputText);
+        AssertInstance.IsTrue(StrPos(ResultText, '2342') > 0, 'Not expected: IncStr changes a number that is not at the end of the string.');
+        AssertInstance.IsTrue(StrPos(ResultText, '-452$') > 0, 'Not expected: IncStr changes a number that is not at the end of the string.');
+        AssertInstance.IsTrue(StrPos(ResultText, '-441') > 0, 'IncStr did not increment the trailing number as expected.');
+    end;
+
+    [Test]
     procedure Contains_StartsWith_EndsWith()
     var
         AssertInstance: Codeunit Assert;
