@@ -30,7 +30,7 @@ Automated AL test codeunits for Microsoft Dynamics 365 Business Central with com
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/thees-k/My-AL-Tests.git
    cd <repository-folder>
    ```
 2. Ensure your `app.json` includes dependencies on Microsoft test libraries:
