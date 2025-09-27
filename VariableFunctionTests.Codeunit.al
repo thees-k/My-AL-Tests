@@ -1,3 +1,4 @@
+// https://learn.microsoft.com/en-us/training/modules/al-built-in-functions/9-variable-functions
 codeunit 50109 VariableFunctionTests
 {
     SubType = Test;
