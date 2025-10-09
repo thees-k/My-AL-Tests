@@ -60,8 +60,8 @@ codeunit 50110 "TryFunctionTests"
     // begin
     //     // DO NOT enable this test in CI or automated runs — it's here to show
     //     // the platform behaviour described in the docs.
-    //     OK := TryMethodThatWritesToDatabase();
-    //     // we don't assert here because the call is expected to raise a runtime error
+    //     asserterror OK := this.TryMethodThatWritesToDatabase();
+    //     this.AssertCodeunit.IsTrue(OK, 'This line should never be reached because the try method should cause a runtime error.');
     // end;
     // -------------------------------------------------------------------------
 
@@ -83,12 +83,22 @@ codeunit 50110 "TryFunctionTests"
     // [tryfunction]
     // local procedure TryMethodThatWritesToDatabase()
     // var
-    //     TestCustomerRecord: Record Customer;
+    //     ItemRecord: Record Item; // example table - this *writes* to a real table
     // begin
-    //     // Example only: inserting into a persistent table inside a try-method is unsupported.
-    //     // The runtime/platform will block this and fail with a runtime error.
-    //     TestCustomerRecord.Init();
-    //     TestCustomerRecord.Name := 'ShouldNotBeInserted';
-    //     TestCustomerRecord.Insert();
-    // end;
+    //     // NOTE: Business Central server configuration normally prevents write transactions
+    //     // inside try-methods and will throw a runtime error if you attempt this on a locked server.
+    //     // This method intentionally performs a write to illustrate the edge-case. In test
+    //     // environments with default server settings this call may fail at runtime.
+
+    //     // Attempt to modify an existing item if available; otherwise try to insert a new one.
+    //     if ItemRecord.FindFirst() then begin
+    //         ItemRecord."Inventory" := ItemRecord."Inventory"; // no-op modification example
+    //         ItemRecord.Modify();
+    //     end else begin
+    //         ItemRecord.Init();
+    //         // minimal required fields for Insert vary by DB; this may still fail if required fields missing
+    //         // so we only attempt Insert to demonstrate the caveat.
+    //         ItemRecord.Insert();
+    //     end;
+    // end
 }
